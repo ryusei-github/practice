@@ -1,0 +1,362 @@
+/* --------------------------------------------------
+BASE
+-------------------------------------------------- */
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Open Sans", Meiryo, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+
+/* --------------------------------------------------
+CUSTOM
+-------------------------------------------------- */
+
+.Main {
+  background: url(../img/main.jpg) center center/cover no-repeat;
+  height: 50vh;
+  padding-bottom: 45%;
+  position: relative;
+  overflow: hidden;
+}
+
+.Main__title {
+  color: #fff;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+}
+
+.Main__subTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .Main__subTitle {
+    font-size: 4vw;
+  }
+}
+
+.Main__mainTitle {
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .Main__mainTitle {
+    font-size: 10vw;
+  }
+}
+
+.Header {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.Header__inner {
+  padding: 1.5rem 0 .5rem;
+  width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .Header__inner {
+    width: 85%;
+  }
+}
+
+.Header__title {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.Header__sns {
+  width: 30px;
+  -webkit-transition: .2s, ease-in;
+  -o-transition: .2s, ease-in;
+  transition: .2s, ease-in;
+}
+
+.Header__sns:hover {
+  opacity: .65;
+}
+
+.Section {
+  padding: 10rem 0;
+}
+
+.Section__title {
+  color: #5FC9B0;
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  margin: 0 auto 4rem;
+}
+
+.Section__title:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  display: inline-block;
+  width: 60px;
+  height: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #5FC9B0;
+  border-radius: 2px;
+}
+
+.Section__memberName {
+  font-size: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+
+/* --------------------------------------------------
+ABOUT
+-------------------------------------------------- */
+.About {
+  background-color: #ffffff;
+}
+
+.About__inner {
+  padding: 1.5rem 0 .5rem;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .About__inner {
+    width: 85%;
+  }
+
+  .Seminar__inner {
+    width: 85%;
+  }
+
+  .Gallery__inner {
+    width: 85%;
+  }
+}
+
+.About__message {
+  color: #545A57;
+  text-align: center;
+  line-height: 3;
+}
+/* -----------------------------
+----------------------------- */
+
+
+/* -----------------------------
+虫食いセクション ①
+----------------------------- */
+
+/* --------------------------------------------------
+.SEMINAR
+-------------------------------------------------- */
+.Seminar {
+  background-color: #CCE7D3;
+}
+
+.Seminar__inner {
+  padding: 1.5rem 0 .5rem;
+  width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  gap: 130px;
+  row-gap: 20px;
+  grid-template-columns: repeat(3,250px);
+}
+
+div.seminar-img img {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  opacity: 0.3;
+  display:block;
+}
+
+.text {
+  position: absolute;
+  color: #fff;
+  margin-top: -275px;
+  margin-left: 20px;
+  font-size: larger;
+}
+
+
+.seminar-img {
+  width: 350px;
+  height: 350px;
+  background-color:#272E2B;
+  display:inline-block;
+}
+
+.seminar-img img {
+  opacity: 0.3;
+  display:block;
+}
+
+@media screen and (max-width: 375px) {
+
+  * {
+      margin: 0;
+      padding: 0;
+      display: revert;
+      
+  }
+
+  .Seminar__inner {
+    display: grid;
+    grid-template-columns: repeat(1,250px);
+    padding: 10px;
+  }
+
+  div.seminar-img img {
+    height: 300px;
+  }
+
+  .text {
+    margin-top: -300px;
+  }
+
+  .Gallery__inner{
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: none;
+  }
+
+  .box1 {
+    grid-column: 1 /2;
+    grid-row: 1;
+  }
+  
+  .box2 {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+  
+  .box3 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+  }
+  
+  .box4 {
+    grid-column: 1 / 5;
+  }
+
+  div.seminar-img img {
+    height: 400px;
+  }
+
+  .seminar-img {
+    width: 350px;
+    height: 400px;
+    background-color: #272E2B;
+    display: inline-block;
+}
+
+}
+/* -----------------------------
+----------------------------- */
+
+
+
+/* -----------------------------
+虫食いセクション ②
+----------------------------- */
+
+
+/* --------------------------------------------------
+GALLERY
+-------------------------------------------------- */
+.Gallery {
+  background-color: #ffffff;
+}
+
+.Gallery__inner {
+  padding: 1.5rem 0 .5rem;
+  padding-bottom: 200px;
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2,250px);
+  grid-template-rows: 120px 100px 80px 120px;
+}
+
+.box1 {
+  grid-column: 1;
+  grid-row: 1 / 2;
+}
+
+.box2 {
+  grid-column: 3 / 5;
+}
+
+.box3 {
+  grid-column: 2 / 4;
+  grid-row: 3 / 5;
+}
+
+.box4 {
+  grid-column: 1 / 5;
+}
+
+div.gallery-img img {
+  width: 250px;
+  height: 250px;
+}
+
+/* -----------------------------
+----------------------------- */
+
+/* --------------------------------------------------
+FOOTER
+-------------------------------------------------- */
+.Gallery {
+  padding-bottom: 0%;
+}
+
+.Footer {
+  background-color: #272E2B;
+}
+
+.Footer__inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .Footer__inner {
+    width: 85%;
+  }
+}
+
+.Footer__inner p {
+  color: #fff;
+  text-align: center;
+}
